@@ -20,10 +20,6 @@ def search(word):
 window = Tk()
 window.title (" DevNgecu Dictionary")
 
-
-iamge2 = Image.open('Twitter.png')
-Photo_image2 = ImageTk.PhotoImage(iamge2)
-
 image = Image.open('WebDevelopemnt.png')
 photo_image = ImageTk.PhotoImage(image)
 label = Label(window, image = photo_image)
