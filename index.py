@@ -26,12 +26,14 @@ def search(word):
 window = Tk()
 window.title (" DevNgecu Dictionary")
 window.geometry("500x500+350+100")
+window.config(bg='#343434')
 
 def close():
     window.destroy()
   
 #label for the word to search
 l1 = Label(window,text="Name")
+li.config(bg='#343434',fg='white')
 l1.place(relx=0,rely=0.005,relwidth=0.1)
 
 
@@ -42,6 +44,7 @@ e1.place(relx=.1,rely=0.005,relwidth=.8)
 
 #label for the word to search
 l2 = Label(window,text="Definition")
+l2.config(bg='#343434',fg='white')
 l2.place(relx=0,rely=.1,relwidth=0.1)
 
 
