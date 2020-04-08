@@ -17,17 +17,6 @@ def search(word):
         output = get_close_matches(word,data.keys())
 
 
-def close():
-    window.destroy()
-
-
-def dark():
-    label.config(image=photo_image)
-
-def light():
-    label.config(image=Photo_image2)
-
-
 window = Tk()
 window.title (" DevNgecu Dictionary")
 
@@ -57,10 +46,6 @@ b1.place(relx=.40,rely=.85,relwidth=.2,relheight=.052)
 t1 = Text(window,fg="white",relief=FLAT,bg="#444444",font = ('courier', 20, 'bold'))
 t1.place(relx=.185,rely=.05,relwidth=.63,relheight=.20)
 
-#menu item
-menubar = Menu(window)
-window.config(menu = menubar)
-menubar.config(bg="white")
 
 
 window.mainloop()
