@@ -1,7 +1,7 @@
 Welcome to the exciting world of GUI programming with Tkinter. This project aims at getting you acquainted with Tkinter, the built-in graphical user interface (GUI) interface for all standard Python distributions.
 
 Tkinter is suited for application to a wide variety of areas ranging from small desktop applications, to use in scientific modeling and research endeavors across various disciplines.The purpose of this project is to make you comfortable with Tkinter. It aims at introducing you to various components of GUI programming with TkinterBy the end of this project, you will have developed several partly functional dummy applications such as the one shown as follows
-![alt text](http://url/to/WebDevelopemnt.png)
+![Alt text](/relative/path/to/WebDevelopemnt.png?raw=true "Optional Title")
 
 The features that make Tkinter a great choice for GUI programming include:-
 
