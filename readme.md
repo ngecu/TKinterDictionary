@@ -257,3 +257,73 @@ get_close_matches(word,data.keys())[0]
 ```
 
 This is so since,the best (no more than n) matches among the possibilities are returned in a list, sorted by similarity score, most similar first.
+
+```
+from tkinter import *
+
+import json
+
+from difflib import get_close_matches
+
+
+
+data = json.load(open("data.json"))
+
+
+
+def search(word):
+
+    if word in data:
+
+        t1.delete(1.0,END)
+
+        t1.config(fg = "white")
+
+        t1.insert(END,data[word])
+
+    elif len(get_close_matches(word,data.keys()))>0:
+
+        t1.config(fg = "red")
+
+        t1.delete(1.0,END)
+
+        t1.insert(END,"Did you mean {} to mean : {} ".format (get_close_matches(word,data.keys()[0]),data[get_close_matches(word,data.keys())[0]]))
+
+        output = get_close_matches(word,data.keys())
+
+
+
+window = Tk()
+
+window.title("Dictionary")
+
+
+
+#Input(Entry)
+
+ntry_value = StringVar()
+
+ntry = Entry(window,textvar = ntry_value,font = ('times',20,'bold'))
+
+ntry.place(relx = .185,rely = 0.70,relwidth = .63,relheight = .082)
+
+
+
+#Search button
+
+btn = Button(window,text = "Search",command = lambda : search(ntry_value.get()),font = ('times',15,'bold'))
+
+btn.place(relx=.40,rely=.85,relwidth=.2,relheight=.052)
+
+
+
+#output the definition of the word
+
+t1 = Text(window,font = ('times',15,'bold'))
+
+t1.place(relx = .185,rely = .05,relwidth = .63,relheight = .20)
+
+
+
+window.mainloop()
+```
